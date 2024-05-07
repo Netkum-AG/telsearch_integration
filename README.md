@@ -43,7 +43,6 @@ Add a custom application
 Debug script for dialplan to be used as custom application
 >noop(${HOSTNAME}/telsearch_integration/search.php?request_text=${CALLERID(num)}&telsearch_key=${TELSEARCH_KEY}&wms_hostname=${HOSTNAME}&wms_app_token=${WMS_APP_TOKEN}&telsearch_phonebook=${TELSEARCH_PHONEBOOK})
 
-### Author
-NETKUM AG - Pierre Anken - pierre.anken@netkum.ch
-
+### Bug report
+Please open an issue on Github with as many details as possible and screenshot from the problem .
 
