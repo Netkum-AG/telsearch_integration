@@ -16,7 +16,6 @@ class WMSInterface:
             }
         ).status_code == 200
 
-
     def get_create_phonebook_id(self):
         resp = requests.get(
             url=f'{self.wms_hostname}/api/v1/Phonebooks/',
