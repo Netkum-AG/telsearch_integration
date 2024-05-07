@@ -23,7 +23,7 @@ chmod +x main.py
 
 ### Lookup mode only
 Define the following variables in **Dialplan > General Settings > Dialplan Variables**:
-- HOSTNAME / https://xxxx.wildixin.com/
+- HOSTNAME / https://xxxx.wildixin.com
 - TELSEARCH_KEY / Get a key from https://tel.search.ch/api/getkey
 - WMS_APP_TOKEN / Simple token generated from **WMS > Integrations > Applications**
 
