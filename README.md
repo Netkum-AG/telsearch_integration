@@ -29,7 +29,7 @@ Define the following variables in Dialplan > General Settings > Dialplan Variabl
 
 
 ### Lookup + contact save mode
-Define the following additional variables in WMS > Dialplan > General Settings > Dialplan Variables:
+Define the following additional variables in Dialplan Variables:
 - TELSEARCH_PHONEBOOK / name of the phone book where to save the contacts. It will be created if non-existing.
 
 
