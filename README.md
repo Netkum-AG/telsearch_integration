@@ -30,7 +30,7 @@ Define the following variables in Dialplan > General Settings > Dialplan Variabl
 
 ### Lookup + contact save mode
 Define the following additional variables in WMS > Dialplan > General Settings > Dialplan Variables:
-- TELSEARCH_PHONEBOOK / name of the phone book where to save the contacts
+- TELSEARCH_PHONEBOOK / name of the phone book where to save the contacts. It will be created if non-existing.
 
 
 ### Dialplan change
@@ -44,5 +44,5 @@ Debug script for dialplan to be used as custom application
 >noop(${HOSTNAME}/telsearch_integration/search.php?request_text=${CALLERID(num)}&telsearch_key=${TELSEARCH_KEY}&wms_hostname=${HOSTNAME}&wms_app_token=${WMS_APP_TOKEN}&telsearch_phonebook=${TELSEARCH_PHONEBOOK})
 
 ### Bug report
-Please open an issue on Github with as many details as possible and screenshot from the problem .
+Please open an issue on Github with as many details as possible and screenshot from the problem.
 
