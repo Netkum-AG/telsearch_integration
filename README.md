@@ -17,15 +17,15 @@ cd telsearch_integration
 chmod +x main.py  
 
 ### Choice of operating mode
-- If the request is made with 4 parameters, only the search will be performed.  
+- If the API call (see under) is made with 4 parameters, only the search will be performed.  
 - If telsearch_phonebook parameter is given, the contact will be automatically saved.
 
 
 ### Lookup mode only
-Define the following variables in Dialplan > General Settings > Dialplan Variables:
+Define the following variables in **Dialplan > General Settings > Dialplan Variables**:
 - HOSTNAME / https://xxxx.wildixin.com/
 - TELSEARCH_KEY / Get a key from https://tel.search.ch/api/getkey
-- WMS_APP_TOKEN / Simple token generated from WMS > Integrations > Applications
+- WMS_APP_TOKEN / Simple token generated from **WMS > Integrations > Applications**
 
 
 ### Lookup + contact save mode
