@@ -2,7 +2,7 @@
 try {
     $request_text = 'TealSearch integration: PHP Error';
     // Check parameters
-    if (isset($_GET['wms_app_token']) && isset($_GET['wms_hostname']) && isset($_GET['$telsearch_key']) && isset($_GET['request_text'])) {
+    if (isset($_GET['wms_app_token']) && isset($_GET['wms_hostname']) && isset($_GET['telsearch_key']) && isset($_GET['request_text'])) {
         $wms_app_token = $_GET['wms_app_token'];
         $wms_hostname = $_GET['wms_hostname'];
         $telsearch_key = $_GET['telsearch_key'];
