@@ -3,7 +3,7 @@ import requests
 
 class WMSInterface:
 
-    def __init__(self, wms_hostname, wms_app_token, telsearch_phonebook):
+    def __init__(self, wms_hostname: str, wms_app_token: str, telsearch_phonebook: str):
         self.wms_hostname = wms_hostname
         self.wms_app_token = wms_app_token
         self.telsearch_phonebook = telsearch_phonebook
