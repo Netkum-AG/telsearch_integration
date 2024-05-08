@@ -1,6 +1,6 @@
 <?php
 try {
-
+    $request_text = ''
     // Check parameters
     if(isset($_GET['wms_app_token']) && isset($_GET['wms_hostname']) && isset($_GET['$telsearch_key']) && isset($_GET['request_text'])) {
         $wms_app_token = $_GET['wms_app_token'];
