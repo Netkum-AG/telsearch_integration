@@ -49,7 +49,7 @@ class Search:
                     'occupation'
                 )
                 extras_to_save = ('email', 'website')
-                ignored_websites = ('facebook', 'linkedin', 'instagram')
+                ignored_websites = ('facebook', 'linkedin', 'instagram', 'twitter')
 
                 # get data of entry
                 for field in child:
@@ -60,9 +60,8 @@ class Search:
                             lookup_entry_dict[field_name] = field.text
 
                         elif field.attrib.get('type') in extras_to_save:
-                            if field.attrib['type'] in extras_to_save:
-                                if not any([company_name in field.text for company_name in ignored_websites]):
-                                    lookup_entry_dict[field.attrib['type']] = field.text.replace('*', '')
+                            if not any([ignored_website in field.text for ignored_website in ignored_websites]):
+                                lookup_entry_dict[field.attrib['type']] = field.text.replace('*', '')
 
                 if 'firstname' in lookup_entry_dict.keys():
                     lookup_entry_dict['display_name'] = f'{lookup_entry_dict["firstname"]} {lookup_entry_dict["name"]}'

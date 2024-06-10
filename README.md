@@ -37,7 +37,7 @@ Define the following additional variables in Dialplan Variables:
 ### Dialplan change
 
 First, you need to check if the number is already known. 
-The easiest way to achieve this it to check if the first digit of the number is a "+".  
+The easiest way to achieve this it to check if the first digit of the caller name is a "+".  
 We jump out, if this is the case, otherwise the caller name will be overwritten and a new contact created every time (if activated).
 
 ![check_number.jpg](doc/check_number.jpg)
