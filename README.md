@@ -52,7 +52,7 @@ Debug script for dialplan to be used as custom application
 
 ### Update
 From WMS console, logged as root.
->cd /var/www/  
+>cd /var/www/telsearch_integration 
 git reset --hard  
 git pull  
 chmod +x main.py  
