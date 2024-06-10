@@ -4,7 +4,8 @@
 This integration makes it possible to query the Search.ch number base and optionally save the result in a Wildix address book.
 
 ### Dev Log
-- 07.05.2024 - Alpha 1
+- 10.06.2024 - Update documentation
+- 07.05.2024 - First release
 
 ### Install
 
@@ -35,14 +36,26 @@ Define the following additional variables in Dialplan Variables:
 
 ### Dialplan change
 
-Add a custom application
->Set(cidname=${CURL(${HOSTNAME}/telsearch_integration/search.php?request_text=${CALLERID(num)}&telsearch_key=${TELSEARCH_KEY}&wms_hostname=${HOSTNAME}&wms_app_token=${WMS_APP_TOKEN}&telsearch_phonebook=${TELSEARCH_PHONEBOOK})})
+First, you need to check if the number is already known. 
+The easiest way to achieve this it to check if the first digit of the number is a "+".  
+We jump out, if this is the case, otherwise the caller name will be overwritten and a new contact created every time (if activated).
 
-![img.png](doc/dialplan.png)
+![check_number.jpg](doc/check_number.jpg)
+
+Add a custom application and set the caller name from the created variable  
+![img.png](doc/caller_name.jpg)
+
+See doc/dialplan_example.json
 
 Debug script for dialplan to be used as custom application
 >noop(${HOSTNAME}/telsearch_integration/search.php?request_text=${CALLERID(num)}&telsearch_key=${TELSEARCH_KEY}&wms_hostname=${HOSTNAME}&wms_app_token=${WMS_APP_TOKEN}&telsearch_phonebook=${TELSEARCH_PHONEBOOK})
 
+### Update
+From WMS console, logged as root.
+>cd /var/www/  
+git reset --hard  
+git pull  
+chmod +x main.py  
+
 ### Bug report
 Please open an issue on GitHub with as many details as possible and screenshot from the problem.
-

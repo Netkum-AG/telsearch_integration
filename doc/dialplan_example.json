@@ -1,0 +1,27 @@
+
+
+// Check if number is already known
+{
+  "name": "GotoIf",
+  "params": {
+    "condition": "\"${CALLERID(name):0:1}\"!=\"+\"",
+    "number": "xxxx",
+    "dialplan": "yyyy"
+  }
+}
+
+// Set caller name
+
+{
+  "name": "CustomApp",
+  "params": {
+    "cwApp": "Set(caller_name=${CURL(${HOSTNAME}/telsearch_integration/search.php?request_text=${CALLERID(num)}&telsearch_key=${TELSEARCH_KEY}&wms_hostname=${HOSTNAME}&wms_app_token=${WMS_APP_TOKEN}&telsearch_phonebook=${TELSEARCH_PHONEBOOK})})"
+  }
+},
+{
+  "name": "Set",
+  "params": {
+    "key": "cidname",
+    "value": "${caller_name}"
+  }
+}
