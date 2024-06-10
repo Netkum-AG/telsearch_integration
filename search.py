@@ -49,7 +49,7 @@ class Search:
                     'occupation'
                 )
                 extras_to_save = ('email', 'website')
-                ignored_websites = ('facebook', 'linkedin', 'instagram')
+                ignored_websites = ('facebook', 'linkedin', 'instagram', 'twitter')
 
                 # get data of entry
                 for field in child:
