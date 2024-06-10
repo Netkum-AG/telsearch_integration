@@ -4,7 +4,8 @@
 This integration makes it possible to query the Search.ch number base and optionally save the result in a Wildix address book.
 
 ### Dev Log
-- 07.05.2024 - Alpha 1
+- 10.06.2024 - Update documentation
+- 07.05.2024 - First release
 
 ### Install
 
@@ -49,11 +50,12 @@ See doc/dialplan_example.json
 Debug script for dialplan to be used as custom application
 >noop(${HOSTNAME}/telsearch_integration/search.php?request_text=${CALLERID(num)}&telsearch_key=${TELSEARCH_KEY}&wms_hostname=${HOSTNAME}&wms_app_token=${WMS_APP_TOKEN}&telsearch_phonebook=${TELSEARCH_PHONEBOOK})
 
-### Bug report
-Please open an issue on GitHub with as many details as possible and screenshot from the problem.
-
-### Update code on PBX
+### Update
+From WMS console, logged as root.
 >cd /var/www/  
 git reset --hard  
 git pull  
 chmod +x main.py  
+
+### Bug report
+Please open an issue on GitHub with as many details as possible and screenshot from the problem.
