@@ -4,6 +4,7 @@
 This integration makes it possible to query the Search.ch number base and optionally save the result in a Wildix address book.
 
 ### Dev Log
+- 13.08.2024 - Bugfix to avoid duplicate contact creation
 - 10.06.2024 - Update documentation
 - 07.05.2024 - First release
 
