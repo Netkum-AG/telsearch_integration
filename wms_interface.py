@@ -55,7 +55,7 @@ class WMSInterface:
                 data={
                     'data[name]': contact_dict['display_name'],
                     'data[phonebook_id]': self.get_create_phonebook_id(),
-                    'data[phone]': contact_dict.get('phone', ''),
+                    'data[phone]': contact_dict.get('request_text', ''),
                     'data[email]': contact_dict.get('email', ''),
                     'data[note]': contact_dict.get('website', ''),
                     'data[address]': f"{contact_dict.get('street', '')} {contact_dict.get('streetno', '')}",
