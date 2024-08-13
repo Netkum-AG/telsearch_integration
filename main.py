@@ -37,6 +37,7 @@ if __name__ == '__main__':
             )
 
             search_result_dict = search.get_entry()
+            search_result_dict['request_text'] = request_text
 
             # if no result return request
             if not search_result_dict:
