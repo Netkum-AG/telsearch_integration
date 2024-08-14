@@ -37,7 +37,6 @@ if __name__ == '__main__':
             )
 
             search_result_dict = search.get_entry()
-            search_result_dict['request_text'] = request_text
 
             # if no result return request
             if not search_result_dict:
@@ -47,4 +46,6 @@ if __name__ == '__main__':
 
                 # contact creation
                 if telsearch_phonebook and search_result_dict:
+                    
+                    search_result_dict['request_text'] = request_text
                     wms_interface.create_contact(search_result_dict)
