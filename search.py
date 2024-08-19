@@ -68,4 +68,6 @@ class Search:
                 else:
                     lookup_entry_dict['display_name'] = lookup_entry_dict["name"]
 
+                lookup_entry_dict['request_text'] = self.request_text
+
                 return lookup_entry_dict
