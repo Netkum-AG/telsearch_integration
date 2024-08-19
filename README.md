@@ -4,6 +4,8 @@
 This integration makes it possible to query the Search.ch number base and optionally save the result in a Wildix address book.
 
 ### Dev Log
+- 19.08.2024 - Cleanup searched number and add missing leading "+"
+- 13.08.2024 - Bugfix to avoid duplicate contact creation
 - 10.06.2024 - Update documentation
 - 07.05.2024 - First release
 
@@ -37,7 +39,7 @@ Define the following additional variables in Dialplan Variables:
 ### Dialplan change
 
 First, you need to check if the number is already known. 
-The easiest way to achieve this it to check if the first digit of the number is a "+".  
+The easiest way to achieve this it to check if the first digit of the caller name is a "+".  
 We jump out, if this is the case, otherwise the caller name will be overwritten and a new contact created every time (if activated).
 
 ![check_number.jpg](doc/check_number.jpg)
@@ -52,7 +54,7 @@ Debug script for dialplan to be used as custom application
 
 ### Update
 From WMS console, logged as root.
->cd /var/www/telsearch_integration 
+>cd /var/www/telsearch_integration  
 git reset --hard  
 git pull  
 chmod +x main.py  
