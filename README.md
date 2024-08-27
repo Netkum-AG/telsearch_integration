@@ -24,14 +24,14 @@ chmod +x main.py
 - If telsearch_phonebook parameter is given, the contact will be automatically saved.
 
 
-### Lookup mode only
+### Lookup mode
 Define the following variables in **Dialplan > General Settings > Dialplan Variables**:
 - HOSTNAME / https://xxxx.wildixin.com
 - TELSEARCH_KEY / Get a key from https://tel.search.ch/api/getkey
-- WMS_APP_TOKEN / Simple token generated from **WMS > Integrations > Applications**
+- WMS_APP_TOKEN / Simple token generated from **PBX > Integrations > Applications**
 
 
-### Lookup + contact save mode
+### Optional: save mode
 Define the following additional variables in Dialplan Variables:
 - TELSEARCH_PHONEBOOK / name of the phone book where to save the contacts. It will be created if non-existing.
 
