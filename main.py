@@ -13,6 +13,10 @@ if __name__ == '__main__':
     else:
         request_text, telsearch_key, wms_hostname, wms_app_token = sys.argv[1:5]
 
+        # add the '+' removed from PHP request
+        if request_text and request_text[0] != '+':
+            request_text = f'+{request_text}'
+
         if len(sys.argv) == 6:
             telsearch_phonebook = sys.argv[-1]
 
@@ -45,6 +49,5 @@ if __name__ == '__main__':
 
                 # contact creation
                 if telsearch_phonebook and search_result_dict:
-                    
                     search_result_dict['request_text'] = request_text
                     wms_interface.create_contact(search_result_dict)
