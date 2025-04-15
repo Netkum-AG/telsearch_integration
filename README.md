@@ -27,14 +27,14 @@ chmod +x main.py
 
 ### Lookup mode
 Define the following variables in **Dialplan > General Settings > Dialplan Variables**:
-- HOSTNAME / https://xxxx.wildixin.com
-- TELSEARCH_KEY / Get a key from https://tel.search.ch/api/getkey
-- WMS_APP_TOKEN / Simple token generated from **PBX > Integrations > Applications**
+- HOSTNAME=<https://xxxx.wildixin.com>
+- TELSEARCH_KEY=<Get a key from https://tel.search.ch/api/getkey>
+- WMS_APP_TOKEN=<Simple token generated from **PBX > Integrations > Applications**>
 
 
 ### Optional: save mode
 Define the following additional variables in Dialplan Variables:
-- TELSEARCH_PHONEBOOK / name of the phone book where to save the contacts. It will be created if non-existing.
+- TELSEARCH_PHONEBOOK=<name of the phone book where to save the contacts. It will be created if non-existing.>
 
 
 ### Dialplan change
