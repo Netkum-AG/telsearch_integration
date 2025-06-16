@@ -61,5 +61,6 @@ git reset --hard
 git pull  
 chmod +x main.py  
 
-### Bug report
+### Bug report & support
 Please open an issue on GitHub with as many details as possible and screenshot from the problem.
+https://app.x-bees.com/kite/pierre.anken@netkum.ch
